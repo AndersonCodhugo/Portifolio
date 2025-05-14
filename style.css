@@ -12,6 +12,10 @@ body {
     margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
     padding: 10px;
     margin: 0;
@@ -87,6 +91,7 @@ h6 {
 
 .portifolio {
     margin: 2%;
+    margin-top: 5%;
 }
 
 .Ancora {
@@ -100,7 +105,27 @@ h6 {
     align-items: center;
     height: 100%;
     justify-content: space-around;
+    font-size: calc(24px + 1%);
 }
+
+#myBtn1,
+#myBtn2,
+#myBtn3 {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+}
+
+#more1,
+#more2,
+#more3 {
+    display: none;
+    color: white;
+}
+
 
 #celular {
     top: 50%;
@@ -108,4 +133,28 @@ h6 {
     width: 15vw;
     align-items: center;
     justify-content: center;
+}
+
+#sidTrip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    text-align: center
+}
+
+#transformaApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    text-align: center
+}
+
+#duby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    object-fit: contain;
+    text-align: center
 }
