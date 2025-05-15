@@ -62,6 +62,7 @@ h6 {
 }
 
 .home{
+    flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
 }
@@ -103,20 +104,28 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5%;
     height: 100%;
     justify-content: space-around;
-    font-size: calc(24px + 1%);
+    font-size: calc(18px + 1%);
 }
 
 #myBtn1,
 #myBtn2,
 #myBtn3 {
-    font-size: 20px;
+    font-size: 30px;
     background: none;
     border: none;
     color: white;
-    padding: 0;
+    padding: 5px;
     cursor: pointer;
+}
+
+#myBtn1:hover,
+#myBtn2:hover,
+#myBtn3:hover {
+    color: gray;
+    transition: 0.2s;
 }
 
 #more1,
@@ -157,4 +166,9 @@ h6 {
     align-items: center;
     object-fit: contain;
     text-align: center
+}
+
+.Skills {
+    margin: 2%;
+    margin-top: 5%;
 }
