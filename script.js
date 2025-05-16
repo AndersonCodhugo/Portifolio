@@ -57,7 +57,7 @@ const skillIcons = [
     'assets/images/vue-js.svg'
 ];
 
-const skillData = [90, 80, 70, 60, 50];
+const skillData = [40, 40, 25, 50, 40];
 
 // Pré-carrega as imagens
 const loadedIcons = skillIcons.map(src => {
@@ -70,11 +70,11 @@ const ctx = document.getElementById('graficoSkills').getContext('2d');
 const chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ['', '', '', '', ''],
+        labels: ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'VUE.JS'],
         datasets: [{
-            label: 'Nível',
+            label: ['Nível'],
             data: skillData,
-            backgroundColor: ['#e44d26', '#264de4', '#f7df1e', '#3572A5', '#42b883'],
+            backgroundColor: ['white'],
             borderRadius: 10,
         }]
     },
@@ -87,7 +87,31 @@ const chart = new Chart(ctx, {
                     font: { size: 24 }
                 }
             },
-            x: { beginAtZero: true, max: 100 }
+            x: {
+                beginAtZero: true,
+                max: 100,
+                ticks: {
+                    callback: function(value) {
+                        if ([0, 50, 100].includes(value)) {
+                            return value === 0 ? 'BÁSICO' :
+                                   value === 50 ? 'INTERMEDIÁRIO' :
+                                   'AVANÇADO';
+                        }
+                        return ''; // Oculta outros valores
+                    },
+                    font: {
+                        size: 20,
+                        family: 'Terminal',
+                        weight: 'bold',
+                        },
+                    color: function(value) {
+                        return value === 0 ? 'white' :
+                                value === 50 ? 'white' :
+                                'white';
+                    }
+                }
+            }
+            
         },
         plugins: {
             legend: { display: false }
@@ -99,13 +123,12 @@ const chart = new Chart(ctx, {
             const yAxis = chart.scales.y;
             const ctx = chart.ctx;
             loadedIcons.forEach((img, i) => {
-                // Só desenha se a imagem já estiver carregada
                 if (img.complete) {
                     ctx.drawImage(
                         img,
-                        yAxis.left - 40,
+                        yAxis.left - 15,
                         yAxis.getPixelForValue(i) - 16,
-                        32, 32
+                        25, 25
                     );
                 }
             });
