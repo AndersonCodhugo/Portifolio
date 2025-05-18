@@ -5,6 +5,7 @@
 
 * {
     font-family: 'Terminal';
+    scroll-padding-top: 60px;
 }
 
 body {
@@ -81,26 +82,33 @@ h6 {
     margin: 0;
     margin-right: 20px; 
     bottom: 0;
+    z-index: -1;
 }
+
 
 #andinho {
     width: auto; 
+    max-width: 40vw;
     margin: 5%;
     height: 97vh;
     object-fit: contain; 
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 96%, rgba(0,0,0,0) 100%);
 }
+
+
 
 .icons {
     display: flex;
     flex-direction: row;
-    gap: 24px; /* Espaço entre os ícones */
+    gap: 24px;
 }
 
 .icons > a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;   /* Tamanho do ícone */
+    width: 48px;
     height: 48px;
     cursor: pointer;
     padding: 0;
@@ -114,7 +122,7 @@ h6 {
 }
 
 .portifolio {
-    margin: 2%;
+    margin: 3%;
     margin-top: 5%;
 }
 
@@ -192,29 +200,53 @@ h6 {
 }
 
 .Skills {
-    margin: 2%;
+    margin: 3%;
     margin-top: 5%;
 }
 
 .Contato {
-    margin: 2%;
-    margin-top: 5%;
+    margin: 3%;
+    margin-top: 3%;
 }
 
 .bloco {
     display: flex;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .contactBox {
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    margin-top: 5%;
-    width: 80%;
-    height: 69vh;
-    padding: 70px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 700px; /* ajuste conforme necessário */
+    padding: 60px;
+    border-radius: 5px;
     background-color: #CCD3CC;
+}
+
+.contactContent {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 32px;
+}
+
+.contactBox > .forms,
+.contactBox > .maps {
+    flex: 1 1 auto;
+    display: flex;
+}
+
+.contactBox > .forms {
+    flex-direction: column;
+    width: 50%;
+}
+
+.contactBox > .maps {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
 }
 
 .forms {
@@ -227,7 +259,8 @@ h6 {
 
 .forms p {
     margin: 0 0 2px 0;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .maps {
@@ -278,6 +311,25 @@ h6 {
     vertical-align: top;
 }
 
+.send {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.send button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-size: 28px;
+}
+
 footer {
     background-color: black;
     color: white;
@@ -287,6 +339,10 @@ footer {
     padding: 0 40px; 
     height: 8vh;
     text-align: left;
+}
+
+.copyrightFooter {
+    font-size: 28px;
 }
 
 .iconsFooter {

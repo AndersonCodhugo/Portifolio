@@ -1,0 +1,120 @@
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .navbar a {
+        font-size: 70%;
+    }
+    .home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Nome {
+        text-align: center;
+        font-size: 24px;
+        max-width: 100%;
+        padding: 0;
+    }
+    #andinho {
+        display: none;
+    }
+    .Nome > .legenda {
+        text-align: center;
+    }
+    .Nome > .icons {
+        justify-content: center;
+    }
+    .Ancora {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .portifolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portifolio > .projetos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    #sidTrip, #transformaApp, #duby {
+        font-size: 24px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    #celular {
+        width: 50%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    #notebook1, #notebook2 {
+        width: 70%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    } 
+}
+
+@media (max-width: 768px) {
+    .Skills {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #graficoSkills {
+        display: none;
+        width: 100%;
+        max-width: 1000vw;
+        height: 200px; /* altura menor para mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .maps {
+        display: none;
+    }
+    .contactContent {
+        flex-direction: column;
+        align-items: center;
+    }
+    .forms {
+        width: 100%;
+        max-width: 100vw;
+        justify-content: center;
+        text-align: center;
+    }
+    .contactBox > .forms {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50%;
+    }
+    .iconsFooter {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: small;
+    }
+}

@@ -57,9 +57,8 @@ const skillIcons = [
     'assets/images/vue-js.svg'
 ];
 
-const skillData = [40, 40, 25, 50, 40];
+const skillData = [40, 40, 25, 45, 20];
 
-// Função para carregar uma imagem com Promise
 function loadImage(src) {
     return new Promise(resolve => {
         const img = new Image();
@@ -68,7 +67,6 @@ function loadImage(src) {
     });
 }
 
-// Carrega todas as imagens e só então cria o gráfico
 Promise.all(skillIcons.map(loadImage)).then(loadedIcons => {
     const ctx = document.getElementById('graficoSkills').getContext('2d');
     const chart = new Chart(ctx, {
@@ -125,9 +123,9 @@ Promise.all(skillIcons.map(loadImage)).then(loadedIcons => {
                 loadedIcons.forEach((img, i) => {
                     ctx.drawImage(
                         img,
-                        yAxis.left - 15,
-                        yAxis.getPixelForValue(i) - 16,
-                        25, 25
+                        yAxis.left - 10,
+                        yAxis.getPixelForValue(i) -20,
+                        50, 50
                     );
                 });
             }
@@ -135,3 +133,10 @@ Promise.all(skillIcons.map(loadImage)).then(loadedIcons => {
     });
 });
 
+function myFunction() {
+  alert("Mensagem enviada com sucesso!");
+    window.location.href = "#Home";
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+}

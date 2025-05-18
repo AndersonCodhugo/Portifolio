@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anderson Hugo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -16,14 +17,14 @@
 </div>
 <div class="home" id="Home">  
     <div class="andinhoFoto">
-        <img src="assets/images/andinho.png" id="andinho">
+        <img  src="assets/images/andinho.png" id="andinho">
     </div>
     <div class="Nome">
         <h1>Anderson</h1>
         <h1>Hugo</h1>
         <div class="legenda">
             <p>Estudante de Ciência da Computação</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>Opa! Eu sou o Anderson e estudo computação na Universidade Tiradentes(UNIT). Sou amante dos filmes e principalmente da tecnologia o que me trouxe a esse curso. Essa é a minha página de apresentação desenvolvida para ser meu cartão de visita demonstrando minhas habilidades, competências e bagagem desde o ano de 2024 quando mergulhei de cabeça nesse universo digital.</p>
         </div>
         <div class="icons">
             <a href="https://github.com/AndersonCodhugo" target="_blank"><img src="assets/images/github.png"></a>
@@ -35,29 +36,29 @@
     <p class="Ancora" id="Portifolio">Portifólio</p>
     <div class="projetos">
         <div id="sidTrip">
-            <img src="assets/images/Hotel.png">
+            <img src="assets/images/Hotel.png" id="notebook1">
             <p>Landing Page Site de Viagens <span id="dots"></span><button onclick="myFunction1()" id="myBtn1">+</button><span id="more1"><br>A Landing Page website SidTrip foi criado a partir de um projeto de aprofundamento do estudo das linguagens de programação HTML e CSS da disciplina de Desenvolvimento Web Front-End na UNIT(Universidade Tiradentes)</span></p>
-            
         </div>
         <div id="transformaApp">
             <img src="assets/images/protótipo-navegável.gif" id="celular">
             <p>Prótotipo de Aplicativo para Projeto Sustentável <span id="dots"></span><button onclick="myFunction2()" id="myBtn2">+</button><span id="more2"><br>O protótipo do aplicativo sustentável Transforma surgiu através da matéria de Ideação e Prototipação de Software do curso de Ciência da Computação com o objetivo de criar uma ideia que se encaixasse em um dos objetivos para o desenvolvimento sustentável da ONU.</span></p>
         </div>
         <div id="duby">   
-            <img src="assets/images/Duby.png">
+            <img src="assets/images/Duby.png" id="notebook2">
             <p>Sistema de Conciliação Bancária <span id="dots"></span><button onclick="myFunction3()" id="myBtn3">+</button><span id="more3"><br>O Sistema de Conciliação é um projeto desenvolvido pelo meu grupo como objetivo em minha primeira Residência em Software da Univerdade Tiradentes(UNIT). O primeiro trabalho robusto com diversas ferramentas em que pude contribuir.</span></p>
         </div>
     </div>
 </div>
 <div class="Skills">
     <p class="Ancora" id="Skills">Skills</p>
-    <canvas id="graficoSkills" width="680" height="250"></canvas>
+    <canvas id="graficoSkills"></canvas>
 </div>
 <div class="Contato">
     <p class="Ancora" id="Contato">Contato</p>
     <div class="bloco">
         <div class="contactBox">
-            <div class="forms">
+            <div class="contactContent">
+                <div class="forms">
                 <p>Nome</p>
                 <input type="text" id="name">
                 <p>E-mail</p>
@@ -67,21 +68,25 @@
             </div>
             <div class="maps">
                 <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5539.345786901901!2d-37.06185699490932!3d-10.97024347011219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e0!3m2!1spt-BR!2sbr!4v1747420579938!5m2!1spt-BR!2sbr"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5539.345786901901!2d-37.06185699490932!3d-10.97024347011219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e0!3m2!1spt-BR!2sbr!4v1747420579938!5m2!1spt-BR!2sbr"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+            </div>
+            <div class="send">
+                <button onclick="myFunction()" class="send">Enviar</button> 
+             </div>     
         </div>
     </div>
 </div>
 <footer>
     <p class="iconsFooter"><img src="assets/images/pino-de-localizacao.png">ARACAJU - SE</p>
     <p class="copyrightFooter">© SidCorp</p>
-    <p class="iconsFooter"><img src="assets/images/telefone.png">79 99879 2211</p>
-</footer>
+    <p class="iconsFooter"><img src="assets/images/telefone.png">79 99879 - 2211</p>
+</footer>   
     <script src="script.js"></script>
 </body>
 </html>
