@@ -5,18 +5,21 @@
 
     }
     .navbar a {
-        font-size: 70%;
+        font-size: 60%;
     }
     .home {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 0;
+        padding: 0;
     }
     .Nome {
         text-align: center;
         font-size: 24px;
         max-width: 100%;
         padding: 0;
+        margin-top: 10%;
     }
     #andinho {
         display: none;
@@ -39,6 +42,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        padding: 0;
     }
     .portifolio > .projetos {
         display: flex;
@@ -70,16 +75,15 @@
 
 @media (max-width: 768px) {
     .Skills {
-        display: none;
-        flex-direction: column;
+        margin: 0;
+        padding: 0;
         align-items: center;
+        text-align: center;
+        display: flex;
         justify-content: center;
-    }
-    #graficoSkills {
-        display: none;
-        width: 100%;
-        max-width: 1000vw;
-        height: 200px; /* altura menor para mobile */
+        flex-direction: column;
+        z-index: -1;
+        padding: 15%;
     }
 }
 
@@ -90,6 +94,13 @@
     .contactContent {
         flex-direction: column;
         align-items: center;
+    }
+    .contactBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 100vw;
     }
     .forms {
         width: 100%;

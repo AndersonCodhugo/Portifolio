@@ -202,6 +202,17 @@ h6 {
 .Skills {
     margin: 3%;
     margin-top: 5%;
+    position: relative; 
+    width: 100%; 
+    max-width: 800px; 
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    z-index: -1;
+
 }
 
 .Contato {
@@ -220,7 +231,7 @@ h6 {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    height: 700px; /* ajuste conforme necessário */
+    height: 700px;
     padding: 60px;
     border-radius: 5px;
     background-color: #CCD3CC;

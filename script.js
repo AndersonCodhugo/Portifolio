@@ -68,48 +68,50 @@ function loadImage(src) {
 }
 
 Promise.all(skillIcons.map(loadImage)).then(loadedIcons => {
-    const ctx = document.getElementById('graficoSkills').getContext('2d');
+    const canvas = document.getElementById('graficoSkills');
+    const ctx = canvas.getContext('2d');
+
     const chart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'VUE.JS'],
             datasets: [{
-                label: ['Nível'],
+                label: 'Nível',
                 data: skillData,
-                backgroundColor: ['white'],
-                borderRadius: 10,
+                backgroundColor: 'white',
+                borderRadius: 10
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: false,
             indexAxis: 'y',
             scales: {
                 y: {
                     ticks: {
-                        callback: function () { return ''; },
-                        font: { size: 22 }
+                        callback: () => '',
+                        font: { size: 16 }
                     }
                 },
                 x: {
                     beginAtZero: true,
                     max: 100,
                     ticks: {
-                        callback: function (value) {
+                        callback: (value) => {
                             if ([0, 50, 100].includes(value)) {
                                 return value === 0 ? 'BÁSICO' :
-                                    value === 50 ? 'INTERMEDIÁRIO' :
-                                    'AVANÇADO';
+                                    value === 50 ? 'INTERMEDIÁRIO' : 'AVANÇADO';
                             }
                             return '';
                         },
                         font: {
-                            size: 20,
+                            size: 16,
                             family: 'Terminal',
-                            weight: 'bold',
+                            weight: 'bold'
                         },
                         color: 'white'
                     }
                 }
-
             },
             plugins: {
                 legend: { display: false }
@@ -118,20 +120,31 @@ Promise.all(skillIcons.map(loadImage)).then(loadedIcons => {
         },
         plugins: [{
             afterDraw: chart => {
-                const yAxis = chart.scales.y;
                 const ctx = chart.ctx;
+                const yAxis = chart.scales.y;
+
                 loadedIcons.forEach((img, i) => {
+                    const barHeight = yAxis._length / skillData.length;
+                    const iconSize = Math.min(barHeight * 0.8, 40); // Responsivo
+
                     ctx.drawImage(
                         img,
                         yAxis.left - 10,
-                        yAxis.getPixelForValue(i) -20,
-                        50, 50
+                        yAxis.getPixelForValue(i) - iconSize / 2,
+                        iconSize,
+                        iconSize
                     );
                 });
             }
         }]
     });
+
+    // Re-renderiza ao redimensionar janela
+    window.addEventListener('resize', () => {
+        chart.update();
+    });
 });
+
 
 function myFunction() {
   alert("Mensagem enviada com sucesso!");
