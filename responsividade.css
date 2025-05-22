@@ -5,7 +5,7 @@
 
     }
     .navbar a {
-        font-size: 60%;
+        font-size: 65%;
     }
     .home {
         display: flex;
@@ -21,8 +21,9 @@
         padding: 0;
         margin-top: 10%;
     }
-    h1 {
-        font-size: 60%;
+    .Nome > h1 {
+        font-size: 84px;
+        margin: 0;
     }
     #andinho {
         display: none;
@@ -38,6 +39,16 @@
         justify-content: center;
         align-items: center;
     }
+    .portifolio,
+    .Skills,
+    .Contato {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    /* Garante que cada bloco ocupe seu espaço */
+    margin-bottom: 40px;
+    clear: both;
+}
 }
 
 @media (max-width: 768px) {
