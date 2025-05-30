@@ -142,7 +142,6 @@ h6 {
 }
 .aula {
     display: flex;
-    display: none;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 20px;

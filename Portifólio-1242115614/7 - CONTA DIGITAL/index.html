@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>BankSE - Conta Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="img_logo.png" alt="BankSE">
+  <div>Olá, Arthur</div>
+</header>
+
+<div class="container">
+  <div class="saldo"><strong>Saldo:</strong> R$ <span id="saldo">0.00</span></div>
+  
+  <div class="entradas-saidas">
+    <div>Entradas: R$ <span id="entradas">0.00</span></div>
+    <div>Saídas: R$ <span id="saidas">0.00</span></div>
+  </div>
+
+  <div class="publicidade">
+    <img src="https://via.placeholder.com/300x100?text=Seguros+para+Família" alt="Seguros">
+  </div>
+
+  <div class="transacoes">
+    <strong>Transações:</strong>
+    <ul id="lista-transacoes">
+      <li>Não constam transações</li>
+    </ul>
+  </div>
+
+  <div class="botoes">
+    <button onclick="abrirPIX()">Área PIX</button>
+    <button onclick="mostrarIndisponivel()">Pagar</button>
+    <button onclick="mostrarIndisponivel()">Investir</button>
+  </div>
+
+  <div class="pix-form" id="pix-form">
+    <div>
+      <span class="aba ativo" onclick="alternarAba('receber')">Receber</span>
+      <span class="aba" onclick="alternarAba('transferir')">Transferir</span>
+    </div>
+
+    <form id="form-receber">
+      <input type="text" id="cpf-receber" placeholder="CNPJ/CPF">
+      <input type="number" id="valor-receber" placeholder="Valor">
+      <button type="button" onclick="receber()">Confirmar Recebimento</button>
+    </form>
+
+    <form id="form-transferir" style="display:none;">
+      <input type="text" id="chave-transferir" placeholder="Chave PIX">
+      <input type="number" id="valor-transferir" placeholder="Valor">
+      <button type="button" onclick="transferir()">Confirmar Transferência</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

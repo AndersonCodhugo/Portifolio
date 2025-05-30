@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quadro de Tarefas - Kanban</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Quadro de Tarefas - Kanban</h1>
+
+  <div id="entradaTarefa">
+    <input id="campoTarefa" type="text" placeholder="Digite uma nova tarefa" />
+    <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+  </div>
+
+  <div class="kanban">
+    <div class="coluna" id="em-aberto" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h3>Para Fazer</h3>
+    </div>
+    <div class="coluna" id="negociacao" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h3>Fazendo</h3>
+    </div>
+    <div class="coluna" id="em-andamento" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h3>Revisão</h3>
+    </div>
+    <div class="coluna" id="entregue" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+      <h3>Concluído</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

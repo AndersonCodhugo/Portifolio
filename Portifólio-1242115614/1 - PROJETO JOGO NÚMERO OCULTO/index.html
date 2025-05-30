@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Jogo: Adivinhe o Número</h1>
+
+    <!-- Interface do Jogador 1 -->
+    <div id="configuracao">
+        <p>Jogador 1, digite o número secreto (entre 1 e 100):</p>
+        <input type="number" id="numeroSecretoInput" min="1" max="100">
+        <button onclick="iniciarJogo()">Ocultar Número</button>
+    </div>
+
+    <!-- Interface do Jogador 2 (inicialmente escondida com style inline) -->
+    <div id="jogo" style="display: none;">
+        <p>Jogador 2, tente adivinhar o número:</p>
+        <input type="number" id="palpiteInput" min="1" max="100">
+        <button onclick="fazerPalpite()">Chutar</button>
+        <p id="tentativasRestantes">Tentativas restantes: 5</p>
+        <p id="mensagem"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

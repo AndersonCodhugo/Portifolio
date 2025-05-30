@@ -1,0 +1,41 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://img.freepik.com/premium-photo/white-crumpled-lined-paper-background_933190-19.jpg);
+}
+
+h1 {
+    color: green;
+}
+
+.tarefa {
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: bolder;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border: solid 2px black;
+    gap: 10px;
+    padding: 5px;
+}
+
+input, button {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}

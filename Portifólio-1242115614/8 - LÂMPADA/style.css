@@ -1,0 +1,16 @@
+body {
+    background: radial-gradient(circle, black 20%, white 250%);display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.body-apagado {
+    background: radial-gradient(circle, black 20%, white 250%);
+
+}
+
+.body-aceso {
+    background: radial-gradient(circle, yellow 2%, black 100%);
+}
