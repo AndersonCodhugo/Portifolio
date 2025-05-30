@@ -30,6 +30,7 @@ html {
     justify-content: center;
     background-color: black;
     width: 100%;
+    z-index: 1;
 }
 
 .navbar a {
@@ -132,13 +133,43 @@ h6 {
 }
 
 .projetos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    height: 100%;
+     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+    gap: 5%;
     font-size: calc(18px + 1%);
+    flex-wrap: wrap;
+}
+.aula {
+    display: flex;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+
+.aula a {
+    /* (100% da largura do .aula - 2 * 20px de gap) / 3 itens */
+    flex-basis: calc((100% - 40px) / 3);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.aula a img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 8px;
 }
 
 #myBtn1,

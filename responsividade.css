@@ -46,7 +46,6 @@
     .Contato {
     position: relative;
     width: 100%;
-    /* Garante que cada bloco ocupe seu espaço */
     margin-bottom: 40px;
     clear: both;
 }
